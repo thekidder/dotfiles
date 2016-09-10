@@ -37,8 +37,7 @@ export HISTSIZE=1000
 export LESS="-RIM"
 export PATH=~/bin:$PATH
 
-export HOMESHICK_DIR=/usr/local/opt/homeshick
-source "/usr/local/opt/homeshick/homeshick.sh"
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
 #-------------------------------------------------------------
 # Python definitions
