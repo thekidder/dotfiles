@@ -67,5 +67,5 @@ export NVM_DIR="/Users/kidder/.nvm"
 # prompt: https://github.com/nojhan/liquidprompt
 #-------------------------------------------------------------
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
-[[ $- = *i* ]] && source ~/.homesick/repos/liquidprompt/liquidprompt
+[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
 
