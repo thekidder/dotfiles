@@ -19,25 +19,28 @@ shopt -s extglob            # enable extended pattern-matching features
 shopt -s hostcomplete       # attempt hostname expansion when @ is at the beginning of a word
 shopt -s nocaseglob         # pathname expansion will be treated as case-insensitive
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-fi
-
 export CLICOLOR=1
 export EDITOR="emacs -nw"
 export HISTCONTROL=ignoreboth # don't put duplicate lines/leading whitespace lines in the history
 export HISTSIZE=1000
 export LESS="-RIM"
-export PATH=~/bin:$PATH
+export PATH="$HOME/bin:$PATH"
+export GIT_SSH="$HOME/myrepos/ssh-ident/ssh-ident"
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+#-------------------------------------------------------------
+# Source other files
+#-------------------------------------------------------------
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
+for f in ~/.bashrc.d/*; do source $f; done
 
 #-------------------------------------------------------------
 # Python definitions
@@ -66,5 +69,5 @@ export NVM_DIR="/Users/kidder/.nvm"
 # prompt: https://github.com/nojhan/liquidprompt
 #-------------------------------------------------------------
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
-[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+[[ $- = *i* ]] && source $HOME/myrepos/liquidprompt/liquidprompt
 
