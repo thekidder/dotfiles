@@ -1,0 +1,8 @@
+MATCH_ARGV = [
+  (r"parlaylabs", "highfive"),
+  (r"fatline", "highfive"),
+  (r"highfive", "highfive"),
+  (r"thekidder", "personal"),
+]
+
+VERBOSITY = LOG_INFO
