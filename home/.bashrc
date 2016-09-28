@@ -56,8 +56,13 @@ export PATH
 export WORKON_HOME=~/.virtualenvs
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 
-export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
-source /usr/local/bin/virtualenvwrapper_lazy.sh
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+  source /usr/local/bin/virtualenvwrapper_lazy.sh
+elif [ -f /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh ]; then
+  export VIRTUALENVWRAPPER_SCRIPT=/usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
+  source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
+fi
 
 #-------------------------------------------------------------
 # Node definitions
