@@ -26,5 +26,3 @@
 [mergetool "sourcetree"]
 	cmd = /private/var/folders/t4/snxdf97j1w76xb6cwpynckt00000gn/T/AppTranslocation/F5419EAE-6A00-4877-A601-11D4629F9E48/d/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[commit]
-	template = /Users/kidder/.stCommitMsg
