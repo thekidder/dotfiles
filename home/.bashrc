@@ -76,3 +76,5 @@ export NVM_DIR="/Users/kidder/.nvm"
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source $HOME/myrepos/liquidprompt/liquidprompt
 
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
