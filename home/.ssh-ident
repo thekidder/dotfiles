@@ -4,6 +4,7 @@ MATCH_ARGV = [
   (r"highfive", "highfive"),
   (r"thekidder", "personal"),
   (r"192.168.128.253", "highfive"),
+  (r"10.", "highfive")
 ]
 
 VERBOSITY = LOG_INFO
