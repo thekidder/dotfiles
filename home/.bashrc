@@ -81,3 +81,8 @@ export NVM_DIR="$HOME/.nvm"
 if [ -d /usr/local/opt/nvm ]; then
   . "/usr/local/opt/nvm/nvm.sh"
 fi
+
+# for publishing the commute project
+export COMMUTE_SSH_SERVER=kidder@thekidder.com
+export COMMUTE_SSH_OPTIONS="-i ~/.ssh/identities/personal/id_rsa"
+export COMMUTE_PATH=/var/www/thekidder/commute
