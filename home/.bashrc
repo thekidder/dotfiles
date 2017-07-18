@@ -24,8 +24,16 @@ export EDITOR="emacs -nw"
 export HISTCONTROL=ignoreboth # don't put duplicate lines/leading whitespace lines in the history
 export HISTSIZE=1000
 export LESS="-RIM"
-export PATH="$HOME/bin:$PATH"
 export GIT_SSH="$HOME/myrepos/ssh-ident/ssh-ident"
+
+NPM_PACKAGES="$HOME/.npm-packages"
+export PATH="$HOME/bin:$NPM_PACKAGES/bin:$PATH"
+
+# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
+# required for rootless npm
+unset MANPATH
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
