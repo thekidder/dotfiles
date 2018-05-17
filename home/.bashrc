@@ -1,5 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
+for f in ~/.bashrc.d/*; do source $f; done
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -48,8 +50,6 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-for f in ~/.bashrc.d/*; do source $f; done
-
 #-------------------------------------------------------------
 # Python definitions
 #-------------------------------------------------------------
@@ -77,6 +77,7 @@ fi
 #-------------------------------------------------------------
 export NVM_DIR="/Users/kidder/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #-------------------------------------------------------------
 # prompt: https://github.com/nojhan/liquidprompt
@@ -94,3 +95,7 @@ fi
 export COMMUTE_SSH_SERVER=kidder@thekidder.com
 export COMMUTE_SSH_OPTIONS="-i ~/.ssh/identities/personal/id_rsa"
 export COMMUTE_PATH=/var/www/thekidder/commute
+
+export PATH="/home/kidder/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
