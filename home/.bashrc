@@ -35,8 +35,8 @@ export PATH="$HOME/bin:$NPM_PACKAGES/bin:$PATH"
 
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
 # required for rootless npm
-unset MANPATH
-export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+# unset MANPATH
+# export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
@@ -100,4 +100,3 @@ export COMMUTE_PATH=/var/www/thekidder/commute
 
 export PATH="/home/kidder/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
